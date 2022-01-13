@@ -1,0 +1,216 @@
+@import "../variables.scss";
+
+.form_block {
+    &_0 {
+        h2 {
+            width: 100%;
+            text-align: center;
+
+            @media screen and (max-width: 500px) {
+                display: none;
+            }
+        }
+
+        & > .row {
+            padding: 3rem 0;
+            align-items: center;
+
+            h3 {
+                width: 40%;
+            }
+
+            form.column {
+                width: 60%;
+                display: flex;
+                align-items: flex-end;
+
+                & > .row {
+                    width: 100%;
+                    padding: 1rem 0;
+                    justify-content: space-between;
+                    position: relative;
+
+                    .column {
+                        width: 49%;
+
+                        fieldset {
+                            padding: 0;
+                            border-color: $disabled_color;
+
+                            legend {
+                                margin: 0 1rem;
+                                font-size: 12px;
+                                color: $disabled_color;
+                            }
+
+                            input {
+                                width: 100%;
+                                padding: 0.5rem 0.7rem;
+                                background-color: transparent;
+                                border: none;
+                                outline: none;
+                            }
+                        }
+                    }
+
+                    textarea {
+                        width: 49%;
+                        height: 136px;
+                        margin: 6px 0 0 0;
+                        display: block;
+                        padding: 0.5rem;
+                        background-color: transparent;
+                        resize: none;
+                        outline: none;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                h3 {
+                    width: 100%;
+                }
+
+                form.column {
+                    width: 100%;
+                }
+            }
+
+            @media screen and (max-width: 450px) {
+                form.column {
+                    .row {
+                        .column,
+                        textarea {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &_1 {
+        h2 {
+            margin: 0 0 2rem 0;
+        }
+        form {
+            padding: 2rem 7rem;
+            border: solid 0.1rem $secondary_color;
+            background-color: rgba($color: $bc_color, $alpha: 0.7);
+
+            h4 {
+                width: 100%;
+            }
+
+            & > .row {
+                margin: 2rem 0 0 0;
+                justify-content: space-between;
+
+                & > div {
+                    width: 48%;
+
+                    .row {
+                        height: max-content;
+                        margin: 1rem 0;
+                        align-items: center;
+                        flex-wrap: nowrap;
+
+                        img {
+                            margin: 0 1rem 0 0;
+                        }
+                    }
+
+                    input {
+                        width: 100%;
+                        margin: 1rem 0;
+                        padding: 0.2rem 2rem;
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 0.1rem solid $disabled_color;
+                        outline: none;
+                        background-repeat: no-repeat;
+
+                        &[type="number"] {
+                            background-image: url(./assets/phone.png);
+                        }
+
+                        &[type="text"] {
+                            background-image: url(./assets/human.png);
+                        }
+                    }
+
+                    button {
+                        width: 70%;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 1200px) {
+                padding: 2rem 4rem;
+
+                & > .row{
+                    & > div{
+                        button {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            @media screen and (max-width: 700px) {
+                padding: 1rem 2rem;
+
+                & > .row{
+                    & > div{
+                        .row{
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            @media screen and (max-width: 500px) {
+                & > .row{
+                    flex-direction: column-reverse;
+
+                    & > div{
+                        width: 100%;
+
+                        &:last-child{
+                            display: flex;
+                            flex-direction: column-reverse;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.thanks {
+    width: 100vw;
+    height: 100vh;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: -150vh;
+    background-image: url(./assets/bc.png);
+    transition: 0.3s;
+    z-index: 1000;
+
+    h3 {
+        text-align: center;
+    }
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba($color: $bc_color, $alpha: 0.3);
+        z-index: -1;
+    }
+}

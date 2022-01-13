@@ -1,0 +1,86 @@
+@import './components/variables.scss';
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+
+    @media only screen and(max-width: 900px) {
+        justify-content: flex-start;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    width: 70%;
+    margin: 0;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.slider {
+    position: relative;
+
+    .slick-arrow {
+        padding: 1rem;
+        position: absolute;
+        top: -2rem;
+        right: 5rem;
+        background-color: $secondary_color;
+        z-index: 1;
+
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            content: "";
+            margin: -5px 0 0 -2px;
+            padding: 5px;
+            display: inline-block;
+            border: solid $txt_color;
+            border-width: 0 1px 1px 0;
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $secondary_color;
+        }
+
+        &.slick-prev {
+            left: unset;
+            right: 8rem;
+        }
+
+        &.slick-next {
+            &::after {
+                margin: -5px 0 0 -7px;
+                transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+            }
+        }
+    }
+}

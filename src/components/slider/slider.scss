@@ -1,0 +1,35 @@
+@import "../variables.scss";
+
+.slider {
+    width: 100vw;
+    margin: 5rem 0 2rem 0;
+
+    .InfiniteCarouselArrow {
+        background-color: $txt_color;
+        padding: 0.5rem 1rem;
+        position: absolute;
+        top: -2.5rem;
+        right: 2rem;
+        left: unset;
+        z-index: 0;
+        transition: 0.3s;
+
+        .InfiniteCarouselArrowIcon {
+            padding: 5px;
+            border-width: 0 3px 3px 0;
+            border-color: $disabled_color;
+        }
+
+        &:first-child {
+            right: 5rem;
+        }
+
+        &:hover {
+            background-color: $secondary_color;
+
+            .InfiniteCarouselArrowIcon {
+                border-color: $txt_color;
+            }
+        }
+    }
+}

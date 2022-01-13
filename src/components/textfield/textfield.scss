@@ -1,0 +1,41 @@
+@import "../variables.scss";
+
+.textfield {
+    height: max-content;
+    padding: 10px 30px;
+    background-color: $txt_color;
+    transition: 0.3s;
+
+    p, h4 {
+        width: 100%;
+        margin: 0.3rem 0;
+        color: $bc_color;
+    }
+
+    &:hover {
+        background-color: $secondary_color;
+
+        p, h4 {
+            color: $txt_color;
+        }
+    }
+
+    &_primary {
+        font-size: 14px;
+        background-color: $secondary_color;
+
+        p, h4 {
+            color: $txt_color;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        padding: 0.2rem 0.5rem;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 1rem;
+    }
+    @media screen and (max-width: 450px) {
+        padding: 0.5rem;
+    }
+}

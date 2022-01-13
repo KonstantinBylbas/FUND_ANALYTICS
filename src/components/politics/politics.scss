@@ -1,0 +1,47 @@
+@import '../variables.scss';
+
+.politics{
+    color: #fff;
+    background-color: #0A0914;
+    padding: 10rem 1rem;
+    position: relative;
+
+    &_title{
+       margin: 0;
+       text-transform: uppercase;
+       color: $txt_color;
+    }
+
+    & p{
+        color: #eee;
+        font-size: 0.9rem;
+        text-align: justify;
+        line-height: 1.3rem;
+        letter-spacing: 1px;
+        position: relative;
+       
+        &::after, &::before{
+            content: '';
+            display: block;
+            width: 100px;
+            height: 100px;
+            filter: blur(50px);
+            position: absolute;
+        }
+    }
+
+    ul{
+        list-style-type: square;
+        padding: 0 0 0 40px;
+
+        ::marker{
+            font-size: 2rem;
+        }
+
+        li{
+            margin: 0.5rem 0;
+            line-height: 1rem;
+            vertical-align: top;
+        }
+    }
+}

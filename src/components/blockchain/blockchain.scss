@@ -1,0 +1,96 @@
+@import "../variables.scss";
+
+.blockchain {
+    background-image: url(./assets/bc.png);
+    background-size: cover;
+    padding: 17rem 0 0;
+
+    & .row {
+        flex-wrap: nowrap;
+    }
+
+    &_top {
+        display: none;
+
+        @media only screen and(max-width: 428px) {
+            justify-content: space-between;
+            display: flex;
+            justify-content: space-between;
+        }
+        & > .blockchain_body_back {
+            display: block;
+            margin: 0;
+        }
+        & > .blockchain_body_back:last-child {
+            width: max-content;
+            padding: 0 0.5rem;
+        }
+    }
+
+    &_body {
+        background: linear-gradient(270.09deg, #000000 41.32%, rgba(0, 0, 0, 0.34) 106.57%);
+        padding: 3rem 1rem;
+        width: 90%;
+
+        @media only screen and(max-width: 768px) {
+            width: 100%;
+            background: #00000083;
+        }
+        @media only screen and(max-width: 428px) {
+            padding: 1rem;
+        }
+
+        h1 {
+            width: 100%;
+            color: $txt_color;
+            line-height: 111%;
+            @media only screen and(max-width: 1150px) {
+                line-height: 100%;
+            }
+        }
+        &_left {
+            min-width: 200px;
+            @media only screen and(max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &_back {
+            display: block;
+            height: 50px;
+            width: 50px;
+            font-size: 1.5rem;
+            background-color: $secondary_color;
+            line-height: 50px;
+            text-align: center;
+            margin: 0 auto;
+
+            &:hover {
+                background-color: $primary_color;
+                color: $txt_color;
+            }
+            @media only screen and(max-width: 768px) {
+                display: none;
+            }
+        }
+
+        p {
+            line-height: 180%;
+            margin: 1rem 0;
+        }
+
+        .row{
+            height: min-content;
+            justify-content: space-between;
+
+            @media only screen and(max-width: 768px) {
+                flex-wrap: wrap;
+
+                button{
+                    width: 100%;
+                    margin: 0.5rem;
+                }
+            }
+        }
+    }
+}

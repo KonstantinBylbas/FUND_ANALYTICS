@@ -1,0 +1,262 @@
+@import "../variables.scss";
+
+.readymade_solutions {
+    background-image: url(./img/bc.jpg);
+    padding: 17rem 0 0 0;
+    width: 100%;
+
+    & .row {
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    &_back {
+        display: block;
+        height: 50px;
+        width: 50px;
+
+        font-size: 1.5rem;
+
+        background-color: $secondary_color;
+        line-height: 50px;
+        text-align: center;
+        margin: 0 auto;
+
+        &:hover {
+            background-color: $primary_color;
+            color: $txt_color;
+        }
+
+        @media only screen and(max-width: 850px) {
+            display: none;
+        }
+    }
+
+    &_body {
+        width: 80%;
+        &_left {
+            width: 10%;
+            min-width: 10%;
+            @media only screen and(max-width: 768px) {
+                width: 100px;
+                min-width: 100px;
+            }
+            @media only screen and(max-width: 550px) {
+                display: none;
+            }
+        }
+
+        h1 {
+            width: 100%;
+            font-size: 3rem;
+            line-height: 111%;
+            span {
+                font-size: 2rem;
+                @media only screen and(max-width: 650px) {
+                    font-size: 0.9rem;
+                }
+            }
+
+            @media only screen and(max-width: 850px) {
+                font-size: 2rem;
+            }
+            @media only screen and(max-width: 650px) {
+                font-size: 1.2rem;
+            }
+        }
+
+        &_title {
+            background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 148.32%);
+            position: relative;
+            padding: 1rem 2rem;
+            margin: 5rem 0 0;
+
+            p {
+                color: $bc_color;
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin: 0 !important;
+                text-transform: uppercase;
+                @media only screen and(max-width: 768px) {
+                    font-size: 1.1rem;
+                }
+                @media only screen and(max-width: 428px) {
+                    text-align: center;
+                }
+            }
+        }
+
+        &_box {
+            display: flex;
+            align-items: flex-start;
+            margin: 2rem 0;
+            & img {
+                width: 4rem;
+                height: 4rem;
+                margin: 0 1rem 0 0;
+                display: block;
+                @media only screen and(max-width: 550px) {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+            }
+            p {
+                opacity: 0.5;
+                line-height: 180%;
+                margin: 0;
+            }
+            @media only screen and(max-width: 850px) {
+                align-items: center;
+            }
+        }
+
+        &_row {
+            background: rgba(17, 139, 221, 0.19);
+            // padding: 1rem;
+            display: flex;
+            line-height: 180%;
+
+            &_cell {
+                width: 20%;
+                margin: 1rem;
+
+                h5 {
+                    font-style: 1.8rem;
+                    position: relative;
+                    height: 30px;
+
+                    &::after {
+                        position: absolute;
+                        display: block;
+                        content: "";
+                        right: 0;
+                        bottom: 0;
+                        width: 1px;
+                        height: 170%;
+                        background-color: #979797;
+                    }
+                }
+                p {
+                    font-size: 0.9rem;
+                    margin: 0;
+                    height: 50px;
+                    @media only screen and(max-width: 900px) {
+                        line-height: 1.1rem;
+                    }
+                }
+
+                img {
+                    display: inline-block;
+                    margin: 0 1rem 0 0;
+                }
+            }
+
+            @media only screen and(max-width: 850px) {
+                display: none;
+            }
+        }
+
+        &_blue {
+            font-size: 1.8rem;
+            line-height: 180%;
+            padding: 1rem 2rem;
+            background-color: $secondary_color;
+            width: 105%;
+            margin: 2rem 0 0 -5%;
+
+            h2 {
+                display: block;
+                width: 100%;
+                @media only screen and(max-width: 1150px) {
+                    font-size: 1.5rem;
+                    line-height: 120%;
+                }
+                @media only screen and(max-width: 768px) {
+                    font-size: 0.8rem;
+                    font-weight: 400;
+                }
+            }
+
+            @media only screen and(max-width: 428px) {
+                width: 100%;
+                margin: 0;
+            }
+        }
+
+        .form {
+            margin: 3rem 0;
+            width: 100%;
+
+            @media only screen and(max-width: 700px) {
+                .row {
+                    flex-direction: column;
+                }
+            }
+            div {
+                width: 100%;
+            }
+
+            label {
+                color: $txt_color;
+                display: block;
+                margin: 1rem 0 0.5rem 0;
+            }
+            span {
+                color: $secondary_color;
+                font-size: 1.1rem;
+            }
+
+            input {
+                color: $bc_color;
+                display: block;
+                height: 50px;
+                width: 95%;
+                border: none;
+                outline: none;
+                padding: 0 1rem;
+
+                @media only screen and(max-width: 768px) {
+                    height: 1.8rem;
+                }
+                @media only screen and(max-width: 428px) {
+                    width: 100%;
+                }
+            }
+
+            button {
+                width: 100%;
+            }
+
+            & .row {
+                flex-direction: row;
+                @media only screen and(max-width: 712px) {
+                    flex-direction: column;
+                }
+            }
+        }
+        &_gradient {
+            margin: 2rem 0;
+            padding: 3rem 1.5rem;
+            background: linear-gradient(89.29deg, #118bdd 0%, rgba($color: $primary_color, $alpha: 0.2) 75%, #118bdd 100%);
+            p {
+                margin: 0;
+                font-size: 1.5rem;
+            }
+        }
+
+        & .row {
+            flex-direction: column;
+            justify-content: center;
+        }
+        @media only screen and(max-width: 550px) {
+            padding: 1rem;
+            width: 100%;
+        }
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

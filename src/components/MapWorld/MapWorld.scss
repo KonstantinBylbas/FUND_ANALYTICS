@@ -1,0 +1,45 @@
+@import "../variables.scss";
+
+.mapWorld {
+    width: 80vw;
+    margin: auto;
+
+    path {
+        width: 0.5rem;
+        height: 0.5rem;;
+        fill: #828282;
+        transition: 0.3s;
+    }
+
+    & &_point {
+        fill: $secondary_color;
+        position: relative;
+
+        &::after{
+            content: '';
+            width: 1rem;
+            height: 1rem;
+            display: block;
+            position: absolute;
+            color: red;
+            fill: red;
+            background-color: red;
+        }
+    }
+
+    &_board {
+        width: 15rem;
+        padding: 1rem;
+        position: absolute;
+        left: 2rem;
+        color: $txt_color;
+        background-color: $secondary_color;        
+
+        h3 {
+            width: 100%;
+            margin: 0 !important;
+            text-align: left !important;
+            font-size: 1.2rem;
+        }
+    }
+}

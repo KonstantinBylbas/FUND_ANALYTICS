@@ -1,0 +1,148 @@
+@import "../variables.scss";
+
+.exampleInvesting {
+    padding-top: 17rem !important;
+
+    .row{
+        justify-content: space-between;
+    }
+
+    &_blue {
+        width: 50%;
+        padding: 2rem 3rem;
+        background-color: $secondary_color;
+
+        &:nth-child(2) {
+            padding: 0;
+        }
+
+        h1 {
+            line-height: 150%;
+        }
+
+        &_column {
+            width: 30%;
+            border-right: 1px solid $txt_color;
+        }
+
+        &_content {
+            width: 70%;
+            margin: 3rem 0;
+
+            h3 {
+                margin: 4rem 0 0 1.5rem;
+                font-size: 5rem;
+                letter-spacing: 5px;
+                position: relative;
+
+                &::after {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    height: 10px;
+                    width: 10px;
+                    background-color: $txt_color;
+                    border-radius: 50%;
+                    left: calc(-2rem + 3px);
+                    top: 50%;
+                }
+            }
+
+            p {
+                margin: 0 0 4rem 1.5rem;
+
+                &:last-child {
+                    margin: 0 0 0 1.5rem;
+                }
+            }
+        }
+    }
+
+    &_black {
+        width: 50%;
+        padding: 2rem 3rem;
+
+        h5 {
+            margin: 2rem 0 0 0;
+        }
+
+        p {
+            line-height: 180%;
+
+            span {
+                opacity: 0.5;
+            }
+        }
+
+        &:nth-child(1){
+            padding: 2rem 0;
+        }
+    }
+
+    &_block {
+        display: flex;
+        align-items: center;
+        padding: 2rem 0;
+        width: 48%;
+
+        p {
+            line-height: 180%;
+        }
+
+        img {
+            display: inline-block;
+            margin: 0 1rem;
+            width: 150px;
+        }
+    }
+
+    &_slider {
+        .InfiniteCarouselArrow {
+            background-color: $secondary_color;
+            padding: 1rem;
+
+            &Icon {
+                padding: 5px;
+                border-width: 0 3px 3px 0;
+            }
+        }
+    }
+    .InfiniteCarouselSlide img {
+        height: 420px;
+    }
+
+    @media only screen and(max-width: 1100px) {
+
+        h2{
+            margin: 2rem 0 0 0;
+        }
+
+        &_block {
+            align-items: flex-start;
+            img {
+                display: none;
+            }
+        }
+    }
+
+    @media only screen and(max-width: 900px) {
+        &_blue {
+            width: 100%;
+            padding: 1rem;
+        }
+
+        &_black {
+            width: 100%;
+
+            &:nth-child(2){
+                padding: 2rem 0 0 0;
+            }
+        }
+
+        &_block {
+            width: 100%;
+            justify-content: flex-start;
+            padding: 1rem 0;
+        }
+    }
+}

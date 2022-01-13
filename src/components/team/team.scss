@@ -1,0 +1,138 @@
+@import "../variables.scss";
+
+.team {
+    & > .bg {
+        height: 25rem;
+        background-image: url(./assets/header.png);
+    }
+
+    & > .content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        background-image: url(./assets/bg.png);
+        position: relative;
+        z-index: 1;
+
+        &::before{
+            content: '';
+            display: block;
+            width: 100vw;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            z-index: -1;
+            background-color: rgba($color: $bc_color, $alpha: 0.8);
+        }
+
+        div {
+            width: 50%;
+
+            h2 {
+                width: 100%;
+            }
+
+            h4 {
+                padding: 0 0 1.5rem 0;
+                color: #adadad;
+                position: relative;
+
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 7rem;
+                    height: 1px;
+                    position: absolute;
+                    bottom: 0;
+                    background: linear-gradient(90deg, rgba(17, 139, 221, 1) 0%, rgba(192, 192, 192, 1) 100%);
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+
+            &.pl-5 {
+                padding: 0 0 0 5rem;
+            }
+            &.pr-5 {
+                padding: 0 5rem 0 0;
+            }
+        }
+
+        .row {
+            width: 100%;
+            margin: -5rem 0 0 0;
+            background-color: $bc_color;
+
+            div {
+                padding: 3.5rem 2.5rem;
+
+                &:first-child {
+                    background-color: $secondary_color;
+                }
+            }            
+        }
+    }
+
+    
+    @media screen and (max-width: 768px) {
+        & > .bg {
+            display: none;
+        }
+
+        & > .content {
+            padding: 17rem 0 0 0;
+            background-color: rgba($color: $bc_color, $alpha: 0.3);
+
+            &::before{
+                background-color: rgba($color: $bc_color, $alpha: 0.3);
+            }
+
+            div{
+                width: calc((100% - 9rem));
+                max-width: max-content;
+                padding: 1rem;
+
+                h2{
+                    width: 70%;
+                }
+
+                h4 {    
+                    &:after {
+                        width: 10rem;
+                    }
+                }
+
+                &.pr-5, &.pl-5{
+                    padding: 1rem;
+                }
+
+                img{
+                    width: 7rem;
+                }
+            }
+
+            .row{
+                padding: 0;
+                flex-direction: column;
+                background-color: transparent;
+
+                & > div{
+                    width: 100%;
+                    padding: 1rem;
+                }
+            }
+
+            @media screen and (max-width: 450px) {
+                div{
+                    width: 100%;
+
+                    img{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

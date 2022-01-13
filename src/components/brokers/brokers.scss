@@ -1,0 +1,150 @@
+@import "../variables.scss";
+
+.brokers.content {
+    .bg {
+        height: 17rem;
+    }
+
+    .brokers_header {
+        padding: 1rem 0 2rem 0;
+        text-align: center;
+        background: linear-gradient(180deg, #118bdd 0%, rgba(0, 0, 0, 0.84) 81.33%);
+    }
+
+    table {
+        width: 100%;
+
+        td {
+            width: 20%;
+            padding: 1.5rem;
+            text-align: center;
+        }
+    }
+
+    h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    & > .row {
+        padding: 3rem 0;
+
+        h3 {
+            width: 40%;
+        }
+
+        & > form.column {
+            width: 60%;
+            display: flex;
+            align-items: flex-end;
+
+            & > .row {
+                width: 100%;
+                padding: 1rem 0;
+                justify-content: space-between;
+                position: relative;
+
+                .column {
+                    width: 49%;
+
+                    fieldset {
+                        padding: 0;
+                        border-color: $disabled_color;
+
+                        legend {
+                            margin: 0 1rem;
+                            font-size: 12px;
+                            color: $disabled_color;
+                        }
+
+                        input {
+                            width: 100%;
+                            padding: 0.5rem 0.7rem;
+                            background-color: transparent;
+                            border: none;
+                            outline: none;
+                        }
+                    }
+                }
+
+                textarea {
+                    width: 49%;
+                    height: 136px;
+                    margin: 6px 0 0 0;
+                    display: block;
+                    padding: 0.5rem;
+                    background-color: transparent;
+                    resize: none;
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .bg {
+            background-image: url(./assets/about_company.png);
+            background-repeat: no-repeat;
+            box-shadow: inset 0 3rem 5rem rgba(0, 0, 0, 0.8);
+        }
+
+        .brokers_header {
+            background: none;
+        }
+
+        table {
+            td {
+                padding: 0.5rem;
+                font-size: 12px;
+            }
+        }
+
+        h2 {
+            padding: 1rem;
+            background-color: $secondary_color;
+        }
+
+        & > .row {
+            flex-direction: column;
+
+            h3 {
+                width: 100%;
+            }
+
+            & > form.column {
+                width: 100%;
+
+                & > .row {
+                    flex-direction: column;
+
+                    .column,
+                    textarea {
+                        width: 100%;
+                    }
+                }
+                button {
+                    width: 100%;
+                    border: solid 2px transparent;
+                    background: $primary_color;
+                    backdrop-filter: blur(15px);
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+
+        table {
+            td {
+                &:nth-child(2),
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        padding: 0.2rem;
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "nav": {
+        "item0": {
+            "title": "About company",
+            "body": [
+                "About us",
+                "Licenses",
+                "Partners",
+                "Team"
+            ]
+        },
+        "item1": {
+            "title": "Services",
+            "body": [
+                "Ready-made solutions",
+                "Broker selection"
+            ]
+        },
+        "item2": "Articles",
+        "item3": "Forum",
+        "item4": "Contacts",
+        "button": "Registration"
+    },
+    "home": {
+        "header": ["The risk comes from not knowing what you’re doing", "© Warren Buffett"],
+        "underInfo": [
+            "Forrex",
+            "Stock",
+            "Commodity",
+            "Cryptocurrency"
+        ],
+        "infoBottom": [
+            "Initial deposit",
+            "Tools",
+            "Security",
+            "Share of successful deals",
+            "In touch"
+        ],
+        "button": "Get Start",
+        "anchors": [
+            "Start",
+            "Наша миссия",
+            "Partners",
+            "Activities",
+            "Our numbers",
+            "Licenses",
+            "Our Articles"
+        ],
+        "special": {
+            "title": "Special offer",
+            "body": [
+                "Trading education",
+                "Find individual strategies"
+            ],
+            "link": "More details"
+        },
+        "mission": {
+            "text": "Join 30 millions traders and investors making better, brighter decisions in the world markets."
+        }
+    },
+    "footer": {
+        "column": [
+            [
+                "About company",
+                "Services",
+                "Investment, strategies",
+                "Articles",
+                "Contact",
+                "Privacy Policy"
+            ],
+            [
+                "Details"
+            ],
+            [
+                {
+                    "title": [
+                        "Phone:",
+                        "Adress:",
+                        "Email:",
+                        "Schedule:"
+                    ]
+                }
+            ]
+        ]
+    }
+}

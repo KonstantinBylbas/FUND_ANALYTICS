@@ -1,0 +1,316 @@
+@import "../variables.scss";
+
+.peculiarities_traiding {
+    background-image: url(./img/bc.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 320px 0 0;
+
+    & .row {
+        flex-wrap: nowrap;
+    }
+
+    &_top {
+        display: none;
+
+        @media only screen and(max-width: 428px) {
+            justify-content: space-between;
+            display: flex;
+            justify-content: space-between;
+        }
+        & > .peculiarities_traiding_body_back {
+            display: block;
+            margin: 0;
+        }
+        & > .peculiarities_traiding_body_back:last-child {
+            width: max-content;
+            padding: 0 0.5rem;
+        }
+    }
+
+    &_body {
+        background: linear-gradient(17.76deg, #000000 55.87%, #adadad 146.08%);
+        padding: 3rem 1rem;
+        max-width: 90%;
+
+        @media only screen and(max-width: 768px) {
+            font-size: 1.2rem;
+            max-width: 100%;
+            background: #00000083;
+        }
+        @media only screen and(max-width: 428px) {
+            background: #000000d8;
+            max-width: 100%;
+            width: 100%;
+            padding: 1rem;
+        }
+
+        h1 {
+            color: $txt_color;
+            font-size: 3rem;
+            line-height: 111%;
+            @media only screen and(max-width: 1150px) {
+                font-size: 2rem;
+                line-height: 100%;
+            }
+            @media only screen and(max-width: 768px) {
+                width: 100%;
+            }
+            @media only screen and(max-width: 455px) {
+                font-size: 1.2rem;
+            }
+        }
+        &_left {
+            width: 200px;
+            min-width: 200px;
+            @media only screen and(max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &_back {
+            display: block;
+            height: 50px;
+            width: 50px;
+
+            font-size: 1.5rem;
+
+            background-color: $secondary_color;
+            line-height: 50px;
+            text-align: center;
+            margin: 0 auto;
+
+            &:hover {
+                background-color: $primary_color;
+                color: $txt_color;
+            }
+            @media only screen and(max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &_title {
+            background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 148.32%);
+            position: relative;
+            padding: 1rem 2rem;
+            margin: 2rem 0 0;
+
+            p {
+                color: $bc_color;
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin: 0 !important;
+                text-transform: uppercase;
+                @media only screen and(max-width: 768px) {
+                    font-size: 1.1rem;
+                }
+                @media only screen and(max-width: 428px) {
+                    text-align: center;
+                }
+            }
+
+            img {
+                left: -170px;
+                top: -100%;
+                position: absolute;
+                @media only screen and(max-width: 768px) {
+                    display: none;
+                }
+            }
+        }
+
+        ul {
+            list-style-type: disc;
+            li {
+                margin: 1rem 0 0 1rem;
+            }
+        }
+        p {
+            line-height: 180%;
+            margin: 1rem 0;
+            font-size: 1.1rem;
+            @media only screen and(max-width: 768px) {
+                font-size: 0.8rem;
+            }
+        }
+
+        &_blue {
+            font-size: 1.8rem;
+            line-height: 180%;
+            padding: 1rem 2rem;
+            background-color: $secondary_color;
+            width: 90%;
+            margin: 0 0 0 10%;
+
+            h2 {
+                display: block;
+                width: 100%;
+                @media only screen and(max-width: 1150px) {
+                    font-size: 1.5rem;
+                    line-height: 120%;
+                }
+                @media only screen and(max-width: 768px) {
+                    font-size: 0.8rem;
+                    font-weight: 400;
+                }
+            }
+
+            @media only screen and(max-width: 428px) {
+                width: 100%;
+                margin: 0;
+            }
+        }
+
+        form {
+            margin: 3rem 0 0;
+            width: 100%;
+
+            @media only screen and(max-width: 600px) {
+                .row {
+                    flex-direction: column;
+                }
+            }
+            div {
+                width: 100%;
+            }
+            h3 {
+                font-size: 1.8rem;
+                line-height: 180%;
+                color: $secondary_color;
+                @media only screen and(max-width: 768px) {
+                    font-size: 1.1rem;
+                }
+            }
+            label {
+                color: $txt_color;
+                display: block;
+                margin: 1rem 0 0.5rem 0;
+            }
+            span {
+                color: $secondary_color;
+                font-size: 1.1rem;
+            }
+
+            input {
+                color: $bc_color;
+                display: block;
+                height: 50px;
+                width: 95%;
+                border: none;
+                outline: none;
+                padding: 0 1rem;
+
+                @media only screen and(max-width: 768px) {
+                    height: 1.8rem;
+                }
+                @media only screen and(max-width: 428px) {
+                    width: 100%;
+                }
+            }
+
+            .full_width {
+                width: 98%;
+                @media only screen and(max-width: 768px) {
+                    width: 95%;
+                }
+                @media only screen and(max-width: 428px) {
+                    width: 100%;
+                }
+            }
+            .litle_input {
+                width: 90%;
+                @media only screen and(max-width: 768px) {
+                    width: 95%;
+                }
+                @media only screen and(max-width: 428px) {
+                    width: 100%;
+                }
+            }
+
+            [type="checkbox"] {
+                width: 1rem;
+                height: 1rem;
+            }
+
+            button {
+                width: 100%;
+            }
+
+            .row {
+                width: 100%;
+            }
+        }
+        &_agree {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            label {
+                margin: 0 0 0 1rem !important;
+                @media only screen and(max-width: 728px) {
+                    font-size: 0.9rem;
+                }
+                @media only screen and(max-width: 428px) {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+
+        &_block {
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            &_file {
+                background-color: #ededed;
+                padding: 1rem;
+
+                img {
+                    height: 40px;
+                }
+                @media only screen and(max-width: 768px) {
+                    display: none;
+                }
+            }
+            p {
+                display: flex;
+                align-items: center;
+                background: #fafafa;
+                color: $bc_color;
+                width: 100%;
+                margin: 0;
+                padding: 0 0 0 2rem;
+                @media only screen and(max-width: 768px) {
+                    padding: 1rem;
+                }
+            }
+
+            a {
+                border: none;
+                outline: none;
+                display: flex;
+                align-items: center;
+                background-color: $secondary_color;
+                padding: 0 2rem;
+                font-size: 1.5rem;
+                cursor: pointer;
+                transition: 0.3s;
+                @media only screen and(max-width: 768px) {
+                    align-items: left;
+                }
+                img {
+                    height: 30px;
+                    @media only screen and(max-width: 768px) {
+                        height: 20px;
+                    }
+                }
+
+                &:hover {
+                    background-color: $primary_color;
+                    color: $txt_color;
+                }
+                @media only screen and(max-width: 768px) {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}

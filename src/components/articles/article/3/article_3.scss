@@ -1,0 +1,45 @@
+@import '../../../variables.scss';
+
+.article_3{
+    .content{
+        width: 85%;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    h2, h5{
+        width: 100%;
+        margin: 1rem 0;
+    }
+    
+    p{
+        color: $disabled_color;
+    }
+    
+    ul{
+        li{
+            margin: 1rem 0 0 1rem;
+
+            &::before{
+                content: '—';
+                margin: 0 1rem 0 0;
+                color: $secondary_color;
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        img{
+            &:first-child{
+                display: none;
+            }
+        }
+
+        .content{
+            width: 100%;
+            margin: 7rem 0 0 0;
+        }
+    }
+}

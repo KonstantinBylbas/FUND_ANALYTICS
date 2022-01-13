@@ -1,0 +1,260 @@
+$bc_color: #000000;
+$disabled_color: #7b7b7b;
+$txt_color: #ffffff;
+$secondary_color: #118bdd;
+$secondar3y_color: #2e4e7b;
+$primary_color: #284061;
+
+@mixin content {
+    padding: 2rem 15vw;
+
+    @media screen and (max-width: 1650px) {
+        padding: 2rem 10vw;
+    }
+
+    @media screen and (max-width: 1000px) {
+        padding: 2rem 5vw;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 1rem;
+    }
+}
+
+@mixin min_content {
+    margin: 2rem -15vw;
+
+    @media screen and (max-width: 1650px) {
+        margin: 2rem -10vw;
+    }
+
+    @media screen and (max-width: 1000px) {
+        margin: 2rem -5vw;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin: -1rem;
+    }
+}
+
+@font-face {
+    font-family: "roboto_regular";
+    src: url(assets/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: "roboto_medium";
+    src: url(assets/Roboto/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: "roboto_bold";
+    src: url(assets/Roboto/Roboto-Bold.ttf);
+}
+
+* {
+    font-family: "roboto_regular";
+    box-sizing: border-box;
+    color: $txt_color;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: $bc_color;
+    overflow-x: hidden;
+
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2.3rem;
+    }
+    h3 {
+        font-size: 1.8rem;
+    }
+    h4 {
+        font-size: 1.5rem;
+    }
+    h5 {
+        font-size: 1.2rem;
+    }
+    h6,
+    p,
+    button,
+    label {
+        font-size: 1rem;
+    }
+
+    .close {
+        width: 2rem;
+        height: 2rem;
+        padding: 0.5rem;
+        display: none;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: $bc_color;
+        fill: $txt_color;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 1100px) {
+        h1 {
+            font-size: 2.2rem;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+        }
+        h4 {
+            font-size: 1.2rem;
+        }
+        h5 {
+            font-size: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+        h3 {
+            font-size: 1.2rem;
+        }
+        h4 {
+            font-size: 1rem;
+        }
+        h5 {
+            font-size: 0.9rem;
+        }
+        h6,
+        p,
+        button,
+        label {
+            font-size: 0.8rem;
+        }
+    }
+
+    a,
+    a:visited,
+    a:active {
+        color: $txt_color;
+        text-decoration: none;
+        transition: 0.3s;
+
+        &:hover {
+            color: $secondary_color;
+        }
+    }
+
+    .content {
+        @include content();
+    }
+
+    .min_content {
+        @include min_content();
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: $bc_color;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    background-color: $secondary_color;
+    border-radius: 9em;
+    transition: all 0.4s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: $txt_color;
+}
+
+/* Стрелки */
+::-webkit-scrollbar-button:vertical:start:decrement {
+    background: linear-gradient(120deg, $bc_color 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(240deg, $bc_color 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(0deg, $bc_color 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: $secondary_color;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+    background: linear-gradient(300deg, $bc_color 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(60deg, $bc_color 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(180deg, $bc_color 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: $secondary_color;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+    background: linear-gradient(30deg, $bc_color 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(150deg, $bc_color 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(270deg, $bc_color 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: $secondary_color;
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+    background: linear-gradient(210deg, $bc_color 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(330deg, $bc_color 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(90deg, $bc_color 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: $secondary_color;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="checkbox"] {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+
+input[type="checkbox"] + label {
+    position: relative;
+    cursor: pointer;
+}
+
+input[type="checkbox"] + label:before {
+    content: "";
+    margin: 0.5rem 0;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 2px solid #0079bf;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+input:checked + label:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border: solid #0079bf;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
